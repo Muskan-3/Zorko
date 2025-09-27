@@ -61,6 +61,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+// phone number working
 document.getElementById("call").addEventListener("click", function() {
     window.location.href = "tel:+919876543210"; 
 });
+
+//swiper
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      spaceBetween: 50,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  });

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ZORKO Franchise — Demo</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
 </head>
 <body>
   <header class="site-header">
@@ -20,21 +24,21 @@
       <nav id="main-nav" class="nav">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#why">Why ZORKO</a></li>
-          <li><a href="#menu">Menu</a></li>
+          <li><a href="#Terms and Conditions">Terms and Conditions</a></li>
+          <li><a href="#Privacy">Privacy</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
-      <a href="#tel: +91 8981460179" class="cta" id="call" >+918981460179 Call</a>
+      <button><a href="#tel: +91 8981460179" id="call" class="call-btn">+918981460179 Call <i class="fa-solid fa-phone"></i></a></button>
+      
     </div>
   </header>
 
   <main>
     <!-- HERO -->
 
-    <section class="form-section">
+    <section class="form-section" id="form">
     <h2>Apply For Zorko Franchise Take Dealership & Distributorship</h2>
     <form class="franchise-form">
       <label>Name <span>*</span></label>
@@ -230,23 +234,102 @@
     <div class="cta">
       <h3>Best Opportunity!</h3>
       <p>Be a part of India’s pure vegetarian, affordable quick-serve franchise chain. Limited prime locations available.</p>
-      <a class="btn" href="#contact">Apply for ZORO Franchise</a>
+      <a class="btn" href="#form">Apply for ZORO Franchise</a>
     </div>
   </section>
 
+<!-- Slider -->
+ 
+  <div class="container" style="padding:40px 0;">
+    <!-- Swiper HTML -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="Images/FrenchFries.png" alt="French Fries">
+
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/GarlicBread.png" alt="Garlic Breads">
+        
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Bronie.png" alt="Sizzling Brownie">
+       
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Combo.png" alt="Combo pack">
+          
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/GarlicBun.png" alt="Garlic Bun">
+          
+        </div>
+      </div>
+
+      <!-- pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
 
 </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>ZORKO Franchise</strong>
-        <p>+91 99099 00139 · franchise@zorko.in</p>
-      </div>
-      <small>© <span id="year"></span> ZORKO Demo — All rights reserved.</small>
-    </div>
-  </footer>
+<!-- Footer -->
 
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <img src="Images/logo ZOrko.jpg" alt="Zorko Logo" class="footer-logo">
+      <p>
+        Zorko Franchise is an Indian company specialized in food industry,
+        part of the Windo Group headed by Nitul Wadia.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>
+        Registered Office: Plot No 176 A, Ground Floor, Noorjahan Ind. Estate, 
+        Surat Lajam, Magdalla Road Surat 395007<br>
+        <strong>+91 82001 43712</strong>
+      </p>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h4>Product</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="someone@gmail.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  
 </body>
 </html>
