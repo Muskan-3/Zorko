@@ -1,0 +1,360 @@
+:root{
+  --container: 1100px;
+  --primary: #e64b2b;
+  --dark: #10202b;
+  --muted: #8295a2;
+  --radius: 12px;
+  --pad: 18px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:#fbfcfd;color:var(--dark);line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:0 18px}
+
+/* Header */
+.site-header{background:#000;border-bottom:1px solid #000;position:sticky;top:0;z-index:60}
+.header-inner{display:flex;align-items:center;gap:16px;padding:12px 0}
+.brand img{height:40px}
+.nav{margin-left:auto}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px;align-items:center}
+.nav a{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover{color:blue; text-decoration: underline;}
+.cta{margin-left:12px;background:var(--primary);color:#f7f7f7;padding:8px 12px;border-radius:8px;text-decoration:none}
+.hamburger{display:none;background:none;border:0;font-size:20px}
+
+/* Hero */
+.hero{padding:48px 0}
+.hero-inner{display:flex;gap:36px;align-items:center}
+.hero-copy{flex:1;min-width:260px}
+.hero h1{font-size:32px;margin:0 0 10px}
+.hero p{color:var(--muted);margin:0 0 18px}
+.hero-actions .btn{margin-right:12px}
+.hero-media img{width:100%;max-width:520px;border-radius:14px;box-shadow:0 8px 30px rgba(16,32,43,0.08)}
+
+/* Franchise form */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+
+.call-btn {
+  background: #d32f2f;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Franchise Form Section */
+.form-section {
+  background: #f9e530; /* bright yellow */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.franchise-form {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.franchise-form label {
+  display: block;
+  font-size: 15px;
+  margin: 10px 0 5px;
+}
+
+.franchise-form label span {
+  color: red;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.franchise-form input,
+.franchise-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.franchise-form button {
+  background: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.franchise-form button:hover {
+  background: #0b7dda;
+}
+
+/* Franchise-info */.franchise-info {
+  background: #000;
+  color: #f97316; /* bright orange text */
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.franchise-info .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.franchise-info h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.franchise-info h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.franchise-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.franchise-info .highlight {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+.franchise-info ul,
+.franchise-info ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.franchise-info li {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+
+
+/* Table Zorko Franchise Investment Overview*/
+h2 {
+  color: #ff9000;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtitle {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #000;
+  color: #ff9000;
+  font-weight: 700;
+}
+
+thead td {
+  border: 1px solid #666;
+  padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+  color: #ff9000;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #000;
+  color: #ff9000;
+}
+
+tbody td {
+  border: 1px solid #666;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.black-bg {
+  background-color: #000 !important;
+  color: #ff9000 !important;
+  font-weight: 700;
+}
+
+/* BENFITS */
+
+.benefits-heading {
+  color: #ff9000;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.benefits-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+}
+
+.benefits-list strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;border:1px solid transparent}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.ghost{background:transparent;color:var(--dark);border-color:#e6eef0}
+
+/* Sections */
+.section-title{font-size:22px;margin:0 0 8px}
+.section-sub{color:var(--muted);margin:0 0 18px}
+
+/* Feature cards */
+.features{padding:28px 0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+.card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(16,32,43,.05)}
+.card h3{margin:0 0 8px}
+
+/* Menu grid */
+.menu{padding:28px 0}
+.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.menu-item{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(16,32,43,.05);text-align:center;padding-bottom:12px}
+.menu-item img{width:100%;height:160px;object-fit:cover}
+.menu-item h4{margin:10px 0 4px}
+.menu-item p{color:var(--primary);margin:0}
+
+/* Gallery */
+.gallery{padding:20px 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,4fr);gap:10px; background-color: #ccc;}
+.gallery-grid img{width:100%;height:300px;object-fit:cover;border-radius:8px}
+
+
+
+/* Contact */
+.contact{padding:28px 0;background:linear-gradient(180deg,#fff,#fff)}
+.contact-inner{display:flex;gap:28px;align-items:flex-start}
+.contact-copy{flex:1;max-width:420px}
+.contact-form{flex:1;display:grid;gap:12px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(16,32,43,.04)}
+.contact-form label{display:flex;flex-direction:column;font-size:14px;color:var(--muted)}
+.contact-form input,.contact-form textarea{margin-top:8px;padding:10px;border:1px solid #e8eef0;border-radius:8px}
+.form-actions{display:flex;gap:10px;align-items:center;margin-top:6px}
+.form-msg{color:green;margin-top:6px}
+
+/* Footer */
+.site-footer{border-top:1px solid #eef2f4;padding:18px 0;margin-top:28px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
+
+/* Responsive */
+@media (max-width: 1000px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-media img{max-width:420px}
+}
+
+@media (max-width: 680px){
+  .nav{display:none}
+  .hamburger{display:block;margin-left:auto}
+  .header-inner{gap:8px}
+  .cards{grid-template-columns:1fr}
+  .contact-inner{flex-direction:column}
+  .menu-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+}
