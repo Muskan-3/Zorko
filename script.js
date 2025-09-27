@@ -60,3 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.getElementById("call").addEventListener("click", function() {
+    window.location.href = "tel:+919876543210"; 
+});
