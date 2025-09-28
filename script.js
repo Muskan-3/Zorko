@@ -107,3 +107,11 @@ menuToggle.addEventListener('click', () => {
   nav.classList.toggle('active');
   menuToggle.classList.toggle('active');
 });
+  const mainNav = document.getElementById('main-nav');
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    // Toggle aria-expanded for accessibility
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+  });
