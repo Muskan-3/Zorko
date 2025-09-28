@@ -86,3 +86,24 @@ document.getElementById("call").addEventListener("click", function() {
       },
     });
   });
+  const swiper = new Swiper('.gallery-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      992: { slidesPerView: 3 },
+      768: { slidesPerView: 2 },
+      576: { slidesPerView: 1 },
+    },
+  });
+  const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('main-nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
