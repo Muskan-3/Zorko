@@ -2206,3 +2206,140 @@ h1 span {
     max-width: 120px;     /* smaller on mobile */
   }
 }
+/* HEADER BASE */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  /* Stylish background */
+  background: linear-gradient(90deg, #000000, #1a1a1a, #000000);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 12px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+
+  animation: slideDown 0.6s ease forwards;
+}
+
+/* Push main content down so header doesn’t overlap */
+body {
+  padding-top: 80px;  /* adjust based on header height */
+}
+
+/* Smooth animation */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* HEADER INNER */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  gap: 20px;
+}
+
+/* LOGO */
+.brand img {
+  max-width: 160px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.brand img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 8px #ffb703);
+}
+
+/* NAVIGATION */
+.nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Fancy hover underline */
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ffb703;
+  transition: width 0.3s ease;
+}
+.nav ul li a:hover {
+  color: #ffb703;
+}
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* CALL BUTTON */
+.call-btn {
+  background: linear-gradient(90deg, #ffb703, #ff416c);
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.call-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255,183,3,0.7);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.hamburger:hover { transform: rotate(90deg); }
+
+/* MOBILE STYLES */
+@media (max-width: 992px) {
+  .hamburger { display: block; }
+  
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border-top: 1px solid #333;
+  }
+
+  .nav.open { max-height: 300px; }
+  .nav ul { flex-direction: column; gap: 15px; padding: 15px 0; text-align: center; }
+
+  .call-btn { display: none; }
+}
