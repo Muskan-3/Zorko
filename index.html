@@ -13,7 +13,7 @@
 
 </head>
 <body>
-  <header class="site-header animate-slide-down">
+  <header class="site-header">
     <div class="container header-inner">
       
       <!-- Logo -->
@@ -45,6 +45,7 @@
   </header>
   
   
+  
 
   <main>
     <!-- Hero -->
@@ -71,7 +72,7 @@
         <div class="hero-image-wrapper">
           <div class="glow-bg"></div>
           <div class="hero-image float-anim">
-            <img src="https://i.pinimg.com/736x/39/25/1c/39251c369b531b2d4173d8f87b0fe9fd.jpg" alt="Zorko Food Franchise" />
+            <img src="zorko4442.jpeg" alt="Zorko Food Franchise" />
           </div>
         </div>
       </div>
@@ -303,17 +304,20 @@
 </script>
 
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mainNav = document.getElementById('main-nav');
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainNav = document.getElementById("main-nav");
 
-  menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
+    menuToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
 
-    // toggle aria-expanded for accessibility
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
+      // toggle aria-expanded for accessibility
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !expanded);
+    });
   });
 </script>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
