@@ -2483,3 +2483,418 @@ body {
     display: none; /* hide top call button on mobile */
   }
 }
+/* ===== HEADER BASE ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: linear-gradient(90deg, #000, #1a1a1a, #000);
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+body {
+  padding-top: 70px; /* prevent overlap with fixed header */
+}
+
+/* ===== INNER CONTAINER ===== */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===== LOGO ===== */
+.brand img {
+  max-width: 140px; /* smaller logo size */
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.brand img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 6px #ffb703);
+}
+
+/* ===== NAVIGATION ===== */
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 25px;
+}
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline hover effect */
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffb703;
+  transition: width 0.3s ease;
+}
+.nav ul li a:hover {
+  color: #ffb703;
+}
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== CALL BUTTON ===== */
+.call-btn {
+  background: linear-gradient(90deg, #ffb703, #ff416c);
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.call-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255,183,3,0.6);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border-top: 1px solid #333;
+  }
+  .nav.open {
+    max-height: 300px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .call-btn {
+    display: none; /* hide call button in mobile header */
+  }
+}
+
+/* ===== HEADER BASE ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: linear-gradient(90deg, #000, #1a1a1a, #000);
+  padding: 6px 0; /* reduced padding */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+body {
+  padding-top: 60px; /* adjust since header is smaller */
+}
+
+/* ===== INNER CONTAINER ===== */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===== LOGO ===== */
+.brand img {
+  max-width: 110px; /* smaller logo */
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.brand img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 4px #ffb703);
+}
+
+/* ===== NAVIGATION ===== */
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 20px; /* slightly tighter spacing */
+}
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px; /* smaller text */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline hover */
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffb703;
+  transition: width 0.3s ease;
+}
+.nav ul li a:hover {
+  color: #ffb703;
+}
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== CALL BUTTON ===== */
+.call-btn {
+  background: linear-gradient(90deg, #ffb703, #ff416c);
+  color: #000;
+  padding: 6px 14px; /* smaller height */
+  border-radius: 20px;
+  font-size: 14px; /* smaller text */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.call-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 8px rgba(255,183,3,0.6);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border-top: 1px solid #333;
+  }
+  .nav.open {
+    max-height: 260px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .call-btn {
+    display: none;
+  }
+}
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 992px) {
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100; /* keep above menu */
+  }
+
+  /* Hide desktop nav initially */
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: rgba(17, 17, 17, 0.95);
+    border-top: 1px solid #333;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+  /* When open */
+  .nav.open {
+    max-height: 320px;
+    opacity: 1;
+  }
+
+  /* Vertical links */
+  .nav ul {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav ul li a {
+    font-size: 16px;
+    padding: 6px 0;
+    display: inline-block;
+  }
+
+  /* Hide call button */
+  .call-btn {
+    display: none;
+  }
+}
+/* Header Base */
+.site-header {
+  width: 100%;
+  background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Inner Flex */
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.brand img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Call Button */
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+  background: linear-gradient(90deg, #ffb703, #ff416c);
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.call-btn i {
+  font-size: 1.2rem;
+}
+
+/* ✅ Mobile Adjustments */
+@media (max-width: 768px) {
+  .brand img {
+    height: 40px; /* smaller logo */
+  }
+
+  .call-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+
+  .call-btn i {
+    font-size: 1rem;
+  }
+}
+/* Reset default spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix header padding */
+.site-header {
+  margin: 0;
+  padding: 8px 20px; /* reduce padding */
+}
