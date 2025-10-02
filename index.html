@@ -159,7 +159,6 @@
         <!-- ✅ Connected to Formspree -->
         <form 
           class="apply-form fade-in delay-1"
-          id="application-form"
           action="https://formspree.io/f/xjkarraw"
           method="POST"
         >
@@ -186,29 +185,37 @@
             <input type="text" name="city" placeholder="Your city or area" required>
           </div>
     
-          <!-- ✅ Send a copy to Rajeev -->
-          <input type="hidden" name="_cc" value="rajeevkumar9115915@gmail.com">
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Write your message here..."></textarea>
+          </div>
     
-          <!-- ✅ Optional: set reply-to so replies go to applicant -->
+          <!-- ✅ Send a copy to Zorko Franchise email (must be verified in Formspree) -->
+          <input type="hidden" name="_cc" value="zorkofranchise95@gmail.com">
+    
+          <!-- ✅ Reply-to will be the applicant’s email -->
           <input type="hidden" name="_replyto" value="">
+    
+          <!-- ✅ Optional redirect after submission -->
+          <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
     
           <button type="submit" class="btn glow-btn">🚀 Submit Application</button>
         </form>
     
-        <!-- ✅ Thank-you message (hidden by default) -->
+        <!-- ✅ Inline Thank-you message (hidden by default) -->
         <div id="thank-you-message" style="display:none; margin-top:20px; color:lightgreen; font-size:18px;">
           🎉 Thank you! Your application has been submitted successfully.
         </div>
       </div>
     </section>
     
-    <!-- ✅ Script to handle Formspree AJAX -->
+    <!-- ✅ Script to handle thank-you without redirect -->
     <script>
-      const form = document.getElementById("application-form");
+      const form = document.querySelector(".apply-form");
       const thankYou = document.getElementById("thank-you-message");
     
       form.addEventListener("submit", async function(event) {
-        event.preventDefault(); // stop normal form submit
+        event.preventDefault();
         const formData = new FormData(form);
     
         try {
@@ -219,16 +226,18 @@
           });
     
           if (response.ok) {
-            form.style.display = "none";   // hide form
-            thankYou.style.display = "block"; // show thank-you
+            form.style.display = "none";
+            thankYou.style.display = "block";
           } else {
-            alert("Oops! Something went wrong. Please try again.");
+            const errorData = await response.json();
+            alert("Error: " + (errorData.error || "Submission failed."));
           }
         } catch (error) {
           alert("Network error. Please try again.");
         }
       });
     </script>
+    
     
   
     <!-- Gallery -->
