@@ -156,34 +156,79 @@
       <div class="container">
         <h2 class="section-title fade-in">📩 Apply Now</h2>
     
-        <form class="apply-form fade-in delay-1">
+        <!-- ✅ Connected to Formspree -->
+        <form 
+          class="apply-form fade-in delay-1"
+          id="application-form"
+          action="https://formspree.io/f/xjkarraw"
+          method="POST"
+        >
           <div class="form-group">
             <label>Name <span>*</span></label>
             <div class="name-fields">
-              <input type="text" placeholder="First name" required>
-              <input type="text" placeholder="Last name" required>
+              <input type="text" name="first-name" placeholder="First name" required>
+              <input type="text" name="last-name" placeholder="Last name" required>
             </div>
           </div>
     
           <div class="form-group">
             <label>Phone <span>*</span></label>
-            <input type="text" placeholder="Your phone number" required>
+            <input type="text" name="phone" placeholder="Your phone number" required>
           </div>
     
           <div class="form-group">
             <label>Email <span>*</span></label>
-            <input type="email" placeholder="Your email" required>
+            <input type="email" name="email" placeholder="Your email" required>
           </div>
     
           <div class="form-group">
             <label>Location / City <span>*</span></label>
-            <input type="text" placeholder="Your city or area" required>
+            <input type="text" name="city" placeholder="Your city or area" required>
           </div>
+    
+          <!-- ✅ Send a copy to Rajeev -->
+          <input type="hidden" name="_cc" value="rajeevkumar9115915@gmail.com">
+    
+          <!-- ✅ Optional: set reply-to so replies go to applicant -->
+          <input type="hidden" name="_replyto" value="">
     
           <button type="submit" class="btn glow-btn">🚀 Submit Application</button>
         </form>
+    
+        <!-- ✅ Thank-you message (hidden by default) -->
+        <div id="thank-you-message" style="display:none; margin-top:20px; color:lightgreen; font-size:18px;">
+          🎉 Thank you! Your application has been submitted successfully.
+        </div>
       </div>
     </section>
+    
+    <!-- ✅ Script to handle Formspree AJAX -->
+    <script>
+      const form = document.getElementById("application-form");
+      const thankYou = document.getElementById("thank-you-message");
+    
+      form.addEventListener("submit", async function(event) {
+        event.preventDefault(); // stop normal form submit
+        const formData = new FormData(form);
+    
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+    
+          if (response.ok) {
+            form.style.display = "none";   // hide form
+            thankYou.style.display = "block"; // show thank-you
+          } else {
+            alert("Oops! Something went wrong. Please try again.");
+          }
+        } catch (error) {
+          alert("Network error. Please try again.");
+        }
+      });
+    </script>
     
   
     <!-- Gallery -->
