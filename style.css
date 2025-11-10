@@ -3029,3 +3029,41 @@ section {
     height: 200px;
   }
 }
+
+
+/* Apply Section Styling */
+.apply-section {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.apply-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Button Style */
+.btn.glow-btn {
+  background-color: #ff4d4d; /* red-pink color */
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+}
+
+/* Hover Effect */
+.btn.glow-btn:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.9);
+  transform: scale(1.05);
+}

@@ -155,62 +155,22 @@
     
   
     <!-- Apply / Contact -->
-    <section class="apply-section section-dark" id="apply">
+    <section class="apply-section" id="apply">
       <div class="container">
         <h2 class="section-title fade-in">📩 Apply Now</h2>
     
-        <!-- ✅ Connected to Formspree -->
-        <form 
-          class="apply-form fade-in delay-1"
-          action="https://formspree.io/f/xjkarraw"
-          method="POST"
-        >
-          <div class="form-group">
-            <label>Name <span>*</span></label>
-            <div class="name-fields">
-              <input type="text" name="first-name" placeholder="First name" required>
-              <input type="text" name="last-name" placeholder="Last name" required>
-            </div>
-          </div>
-    
-          <div class="form-group">
-            <label>Phone <span>*</span></label>
-            <input type="text" name="phone" placeholder="Your phone number" required>
-          </div>
-    
-          <div class="form-group">
-            <label>Email <span>*</span></label>
-            <input type="email" name="email" placeholder="Your email" required>
-          </div>
-    
-          <div class="form-group">
-            <label>Location / City <span>*</span></label>
-            <input type="text" name="city" placeholder="Your city or area" required>
-          </div>
-    
-          <div class="form-group">
-            <label>Message</label>
-            <textarea name="message" placeholder="Write your message here..."></textarea>
-          </div>
-    
-          <!-- ✅ Send a copy to Zorko Franchise email (must be verified in Formspree) -->
-          <input type="hidden" name="_cc" value="zorkofranchise95@gmail.com">
-    
-          <!-- ✅ Reply-to will be the applicant’s email -->
-          <input type="hidden" name="_replyto" value="">
-    
-          <!-- ✅ Optional redirect after submission -->
-          <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
-    
-          <button type="submit" class="btn glow-btn">🚀 Submit Application</button>
-        </form>
-    
-        <!-- ✅ Inline Thank-you message (hidden by default) -->
-        <div id="thank-you-message" style="display:none; margin-top:20px; color:lightgreen; font-size:18px;">
-          🎉 Thank you! Your application has been submitted successfully.
+        <div class="apply-form fade-in delay-1">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLScBbcseXlo_QUO8kZx4hKBlCo4Bv5RPBz8xCPr__vIOOdREPw/viewform?usp=sharing&ouid=116580994214487190226" 
+            target="_blank" 
+            class="btn glow-btn"
+          >
+            📩 Apply Now (Google Form)
+          </a>
         </div>
       </div>
     </section>
+    
     
     <!-- ✅ Script to handle thank-you without redirect -->
     <script>
