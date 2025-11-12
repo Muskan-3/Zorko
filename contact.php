@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $state = htmlspecialchars($_POST['state']);
 
     $message = "
-    <h2 style='color:#ff6600;'>New Franchise Application</h2>
+    <h2 style='color:#ff6600;'>Zorko New Franchise Application</h2>
     <p><strong>Name:</strong> $name</p>
     <p><strong>Email:</strong> $email</p>
     <p><strong>Phone:</strong> $phone</p>
